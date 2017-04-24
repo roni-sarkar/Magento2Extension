@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="infoway_modules" sortOrder="10" translate="label">
+            <label>Infoway</label>
+        </tab>
+        <section id="sku_modifier" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+            <label>SKU Modifier</label>
+            <tab>infoway_modules</tab>
+            <resource>Infoway_Skumodifier::config_infoway_skumodifier</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>General</label>
+                <field id="is_active" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Is Active?</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="category" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+                <label>Category</label>
+                <field id="is_category_prefix" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Add Category</label>
+                    <comment>Example(SKU Render As): ELECTRO-1.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="category_position" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Position of Category</label>
+                    <comment>Note: Set postion where category will be render in product SKU.</comment>
+                </field>
+                <field id="category_noofletter" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                    <label>Number of Letter in Category</label>
+                    <comment>Note: If you set 5 then SKU will be ELECT-1.</comment>
+                </field>
+            </group>
+            <group id="attributeset" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label">
+                <label>Attribute Set</label>
+                <field id="is_attributeset_prefix" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Add Attribute Set</label>
+                    <comment>Example(SKU Render As): MOBILE-1</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="attributeset_position" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Position of Attribute Set</label>
+                    <comment>Note: Set postion where attribute set will be render in product SKU.</comment>
+                </field>                
+                <field id="attributeset_noofletter" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                    <label>Number of Letter in Attribute Set</label>
+                    <comment>Note: If you set 5 then SKU will be MOBIL-1.</comment>
+                </field>
+            </group>
+            <group id="customtext" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+                <label>Custom Text</label>
+                <field id="is_customtext_prefix" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Add Custom Prefix Text</label>
+                    <comment>Example: MY-STORE</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customtext_value" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Your Custom Text Here</label>
+                    <comment/>
+                </field>
+                <field id="customtext_position" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                    <label>Position of Custom Text</label>
+                    <comment>Note: Set postion where your text will be render in product SKU.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

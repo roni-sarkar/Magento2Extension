@@ -1,0 +1,21 @@
+{
+    "name": "infoway/module-skumodifier",
+    "description": "Modify Product SKU by Category, Attribute Set",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Infoway\\Skumodifier\\": ""
+        }
+    }
+}
